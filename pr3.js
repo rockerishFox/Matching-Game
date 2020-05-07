@@ -11,8 +11,10 @@ $(document).ready(function () {
 
 function startGame() {
   $("#btn-start").css("opacity", "0");
-  $("#btn-restart").css("opacity", "1");
+  $("#btn-restart").css("opacity", "1").addClass("light").removeClass("dark");
   $("table").css("opacity", "1");
+
+  $("body").css("background-color", "var(--color-grey)");
 
   $(".card").each(function () {
     $(this).removeClass("disabled");

@@ -10,7 +10,23 @@
     <link type="image/x-icon" href="Resources/icon.png" rel="icon" />
   </head>
   <body>
-    <br />
+    <div class="buttons">
+      <input
+        class="button dark"
+        id="btn-start"
+        type="button"
+        value="Start"
+        onclick="startGame()"
+      />
+      <input
+        class="button dark"
+        type="button"
+        id="btn-restart"
+        value="Restart"
+        onclick="startGame()"
+      />
+    </div>
+
     <div class="container">
       <table id="table">
         <tr>
@@ -70,20 +86,7 @@
           </td>
         </tr>
       </table>
-      <div class="buttons">
-        <input
-          id="btn-start"
-          type="button"
-          value="Start"
-          onclick="startGame()"
-        />
-        <input
-          type="button"
-          id="btn-restart"
-          value="Restart"
-          onclick="startGame()"
-        />
-      </div>
+
       <br />
     </div>
   </body>

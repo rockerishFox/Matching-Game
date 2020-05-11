@@ -1,5 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+
 :root {
   --color-grey: #444;
+  --color-tea-green: #ccfccb;
+  --color-lace: #f8f4e3;
 }
 
 body {
@@ -10,19 +14,30 @@ body {
 
   background-color: transparent;
 }
+
 .container {
   text-align: center;
   display: flex;
   justify-content: center;
-  height: 93%;
+  height: auto;
 }
+
 .buttons {
   display: flex;
   text-align: center;
   justify-content: center;
-  padding-top: 10px;
-  height: 7%;
+  margin: 0;
 }
+
+.buttons.header {
+  height: 5%;
+  padding-top: 1%;
+}
+.buttons.footer {
+  height: 0%;
+  padding: 0;
+}
+
 table {
   border: 0px;
   background-color: var(--color-grey);
@@ -35,7 +50,7 @@ td {
   margin: 5px;
   padding: 2px;
   border-radius: 12px;
-  background-color: blanchedalmond;
+  background-color: var(--color-lace);
 }
 .card-img {
   height: 200;
@@ -49,17 +64,23 @@ td {
 
 .button {
   width: 130px;
-  height: 50px;
+  height: 100%;
   background: transparent;
   margin: 0;
-  border-radius: 21px;
+  border-radius: 40px;
+  font-family: "Quicksand";
+  font-weight: 800;
+  font-size: 16px;
 
   outline: 0;
+
+  transition: ease-in 0.25s;
 }
 
 #btn-restart {
   opacity: 0;
 }
+
 #btn-start {
   opacity: 1;
 }
@@ -67,12 +88,28 @@ td {
 .dark {
   color: var(--color-grey);
   border: 1px solid var(--color-grey);
-
-  transition: ease-out 0.3s;
 }
+
 .light {
   color: white;
   border: 1px solid white;
+}
 
-  transition: ease-out 0.3s;
+.button:hover {
+  font-weight: 900;
+  transition: ease-in 0.25s;
+}
+
+.button.dark:hover {
+  background-color: var(--color-grey);
+  border: 1px solid var(--color-grey);
+
+  color: white;
+}
+
+.button.light:hover {
+  background-color: white;
+  border: 1px solid white;
+
+  color: var(--color-grey);
 }

@@ -4,13 +4,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Matching Game</title>
+    <link type="text/css" href="main.css" rel="stylesheet" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript" src="pr3.js"></script>
-    <link type="text/css" href="main.css" rel="stylesheet" />
+
     <link type="image/x-icon" href="Resources/icon.png" rel="icon" />
   </head>
   <body>
-    <div class="buttons">
+    <div class="buttons header">
       <input
         class="button dark"
         id="btn-start"
@@ -18,13 +19,13 @@
         value="Start"
         onclick="startGame()"
       />
-      <input
+      <!-- <input
         class="button dark"
         type="button"
         id="btn-restart"
         value="Restart"
         onclick="startGame()"
-      />
+      /> -->
     </div>
 
     <div class="container">
@@ -86,8 +87,22 @@
           </td>
         </tr>
       </table>
-
-      <br />
+    </div>
+    <div class="buttons footer">
+      <!-- <input
+        class="button dark"
+        id="btn-start"
+        type="button"
+        value="Start"
+        onclick="startGame()"
+      /> -->
+      <input
+        class="button dark"
+        type="button"
+        id="btn-restart"
+        value="Restart"
+        onclick="startGame()"
+      />
     </div>
   </body>
 </html>

@@ -15,6 +15,9 @@ function startGame() {
   $("table").css("opacity", "1");
 
   $("body").css("background-color", "var(--color-grey)");
+  $(".header").css("height", "0").css("padding", "0");
+  $(".footer").css("height", "5%").css("padding-top", "1%");
+  $(".container").css("height", "auto");
 
   $(".card").each(function () {
     $(this).removeClass("disabled");
@@ -42,8 +45,6 @@ function startGame() {
 }
 
 function displayImg(card) {
-  // console.log(matchedCards);
-  // console.log("current cards is matched? - " + inCardsMatched(card));
   if (!inCardsMatched(card)) {
     $(card).addClass("disabled");
     $(card).find(":first-child").css("opacity", "1");
@@ -67,7 +68,6 @@ function cardClicked(card) {
       matchedCards.push(card);
       openCards = [];
 
-      // console.log(" DONE? " + matchedCards.length == 8);
       if (matchedCards.length == 8) {
         setTimeout(function () {
           alert("GOOD JOB!");
